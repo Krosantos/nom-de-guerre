@@ -1,0 +1,41 @@
+html, body, #root {
+    margin:0;
+    height: 100%;
+    background-color: #F7F7F7;
+    font-family: "Barlow", sans-serif;
+}
+
+@font-face {
+    font-family: 'Cinzel';
+    src: url("../static/fonts/Cinzel-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Cinzel-Black';
+    src: url("../static/fonts/Cinzel-Black.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Cinzel-Bold';
+    src: url("../static/fonts/Cinzel-Bold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Barlow';
+    src: url("../static/fonts/BarlowCondensed-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Barlow-Bold';
+    src: url("../static/fonts/BarlowCondensed-Bold.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Barlow-Italic';
+    src: url("../static/fonts/BarlowCondensed-Italic.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'Barlow-Thin';
+    src: url("../static/fonts/BarlowCondensed-Thin.ttf") format('truetype');
+}

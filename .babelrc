@@ -1,0 +1,31 @@
+{
+	"presets": [
+		[
+			"env",
+			{
+				"targets": {
+					"electron": "2.0.2"
+				}
+			}
+		],
+		"react"
+	],
+	"plugins": [
+		"transform-object-rest-spread",
+		"transform-runtime",
+		[
+			"module-resolver",
+			{
+				"root": [
+					"./src"
+				],
+				"alias": {
+					"@api": "./src/client/modules/api",
+					"@components": "./src/client/components",
+					"@pairs": "./src/client/modules/pairs",
+					"@selectors": "./src/client/modules/selectors"
+				}
+			}
+		]
+	]
+}
