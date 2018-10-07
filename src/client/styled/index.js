@@ -52,8 +52,10 @@ export const Image = styled.img`
 	${commonStyles};
 `;
 Image.displayName = 'Image';
+Image.defaultProps = { alt: '' };
 
 export const Svg = styled.svg`
-	${commonStyles};
+${commonStyles};
 `;
 Svg.displayName = 'Svg';
+Svg.defaultProps = { alt: '' };
