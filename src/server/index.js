@@ -10,4 +10,4 @@ app.get('*', (req, res) => {
 	res.sendFile(path.join(DIST_DIR, 'index.html'));
 });
 
-app.listen(3000);
+app.listen(4000);

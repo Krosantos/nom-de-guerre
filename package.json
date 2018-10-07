@@ -10,7 +10,7 @@
         "compile-mac": "yarn build && node electron/prebuild && electron-packager ./staging \"Nom de Guerre\" --asar --icon=./icon --packageManager=yarn --appCategoryType=public.app-category.utilities --out=compiled/ --platform=darwin --no-tmpdir --overwrite",
         "compile-windows": "yarn build && node electron/prebuild && electron-packager ./staging \"Nom de Guerre\" --asar --icon=./icon --packageManager=yarn --out=compiled/ --platform=win32 --no-tmpdir --overwrite",
         "dev": "webpack-dev-server --mode development",
-        "docker": "docker build -t ndg . && docker run -p 3000:3000 ndg",
+        "docker": "docker build -t ndg . && docker run -p 4000:4000 ndg",
         "lint": "eslint .",
         "serve": "nodemon src/server/index.js --exec \"node -r dotenv/config -r babel-register\"",
         "start": "concurrently --kill-others \"yarn dev\" \"yarn window\"",
