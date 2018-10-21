@@ -14,6 +14,7 @@ import {
 	space,
 	width,
 } from 'styled-system';
+import BaseComponent from './BaseComponent';
 import cssProps from './cssProps';
 
 const commonStyles = css`
@@ -33,29 +34,30 @@ const commonStyles = css`
 	${Object.keys(cssProps).map((key) => cssProps[key])};
 `;
 
-export const Box = styled.div`
+export const Box = styled(BaseComponent('div'))`
     ${commonStyles};
 `;
 Box.displayName = 'Box';
 
-export const Text = styled.span`
+export const Text = styled(BaseComponent('span'))`
 	${commonStyles};
 `;
 Text.displayName = 'Text';
 
-export const Button = styled.button`
+export const Button = styled(BaseComponent('button'))`
 	${commonStyles};
 `;
+Button.defaultProps = { outline: '0px' };
 Button.displayName = 'Button';
 
-export const Image = styled.img`
+export const Image = styled(BaseComponent('img'))`
 	${commonStyles};
 `;
-Image.displayName = 'Image';
 Image.defaultProps = { alt: '' };
+Image.displayName = 'Image';
 
-export const Svg = styled.svg`
+export const Svg = styled(BaseComponent('svg'))`
 ${commonStyles};
 `;
-Svg.displayName = 'Svg';
 Svg.defaultProps = { alt: '' };
+Svg.displayName = 'Svg';
