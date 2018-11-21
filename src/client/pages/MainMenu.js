@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Text } from '@styled';
-import MainButton from '@components/MainButton';
+import MainMenuButton from '@components/MainMenuButton';
+import constants from 'constants';
 
 const MainMenu = () => (
 	<Box height="100%" display="flex" flexDirection="column">
@@ -15,15 +16,15 @@ const MainMenu = () => (
 		>
 			Nom de Guerre
 		</Text>
-		<MainButton mt="2rem">
+		<MainMenuButton mt="2rem">
 			Find Match
-		</MainButton>
-		<MainButton mt="2rem">
+		</MainMenuButton>
+		<MainMenuButton mt="2rem" pageType={constants.EDIT_ARMY_PAGE}>
 			Edit Armies
-		</MainButton>
-		<MainButton mt="2rem">
+		</MainMenuButton>
+		<MainMenuButton mt="2rem">
 			Settings
-		</MainButton>
+		</MainMenuButton>
 	</Box>
 );
 

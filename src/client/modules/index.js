@@ -7,7 +7,7 @@ const actionMap = assign(
 );
 
 export const initialState = {
-	activePage: 'mainMenu',
+	activePage: 'editArmy',
 };
 
 export const rootReducer = (state, action) => {

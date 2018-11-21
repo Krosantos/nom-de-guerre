@@ -3,7 +3,7 @@ import {
 	active,
 	borderColor,
 	borderRadius,
-	borderWidth,
+	borders,
 	boxShadow,
 	color,
 	disabled,
@@ -21,7 +21,7 @@ const commonStyles = css`
 	${hover};
 	${active};
 	${borderRadius};
-	${borderWidth};
+	${borders};
 	${borderColor};
 	${color};
 	${disabled};
@@ -61,3 +61,8 @@ ${commonStyles};
 `;
 Svg.defaultProps = { alt: '' };
 Svg.displayName = 'Svg';
+
+export const Path = styled(BaseComponent('path'))`
+${commonStyles};
+`;
+Path.displayName = 'Path';
