@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Button } from '@styled';
+import { themeGet } from 'styled-system';
+
 const StyledButton = styled(Button).attrs({
 	bg: 'wine',
 	border: 'none',
@@ -9,14 +11,14 @@ const StyledButton = styled(Button).attrs({
 	display: 'block',
 	fontFamily: 'Cinzel',
 	fontSize: '2rem',
-	active: {
-		backgroundColor: 'wood',
-	},
-	hover: {
-		backgroundColor: 'blood',
-	},
+	transition: 'background-color 350ms',
 })`
-    transition: background-color 350ms;
+	:hover {
+		background-color: ${themeGet('colors.blood')};
+	}
+	:active {
+		background-color: ${themeGet('colors.wood')};
+	}
 `;
 const MainMenuButton = ({
 	children,

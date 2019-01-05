@@ -51,6 +51,7 @@ const props = {
 	'text-decoration': null,
 	'text-transform': null,
 	'text-overflow': null,
+	transition: null,
 	'vertical-align': null,
 	'white-space': null,
 	'z-index': null,
