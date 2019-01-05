@@ -130,5 +130,4 @@ const validAttributes = [
 	'children',
 	'dangerouslySetInnerHTML',
 ];
-
 export default validAttributes;

@@ -1,6 +1,5 @@
-import { responsiveStyle } from 'styled-system';
+import { style } from 'styled-system';
 import { camelCase } from 'lodash';
-
 const props = {
 	'align-content': null,
 	'align-items': null,
@@ -56,9 +55,8 @@ const props = {
 	'white-space': null,
 	'z-index': null,
 };
-
 export default Object.keys(props).reduce((prev, curr) => {
 	const propName = camelCase(curr);
-	prev[propName] = responsiveStyle({ prop: propName, cssProperty: curr, key: props[curr] }); // eslint-disable-line no-param-reassign
+	prev[propName] = style({ prop: propName, cssProperty: curr, key: props[curr] }); // eslint-disable-line no-param-reassign
 	return prev;
 }, {});

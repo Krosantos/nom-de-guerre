@@ -1,6 +1,6 @@
+const url = require('url');
 const { app, BrowserWindow } = require('electron');
 const path = require('path');
-const url = require('url');
 
 // Keep a global reference of the window object, to spare it from garbage collection.
 let mainWindow;

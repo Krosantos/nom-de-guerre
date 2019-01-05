@@ -1,31 +1,21 @@
 import styled, { css } from 'styled-components';
 import {
-	active,
 	borderColor,
 	borderRadius,
 	borders,
 	boxShadow,
 	color,
-	disabled,
-	focus,
 	fontSize,
 	fontWeight,
-	hover,
 	space,
 	width,
 } from 'styled-system';
-import BaseComponent from './BaseComponent';
 import cssProps from './cssProps';
-
 const commonStyles = css`
-	${hover};
-	${active};
 	${borderRadius};
 	${borders};
 	${borderColor};
 	${color};
-	${disabled};
-	${focus};
 	${fontSize};
 	${boxShadow};
 	${space};
@@ -33,36 +23,30 @@ const commonStyles = css`
 	${width};
 	${Object.keys(cssProps).map((key) => cssProps[key])};
 `;
-
-export const Box = styled(BaseComponent('div'))`
+export const Box = styled.div`
     ${commonStyles};
 `;
 Box.displayName = 'Box';
-
-export const Text = styled(BaseComponent('span'))`
+export const Text = styled.span`
 	${commonStyles};
 `;
 Text.displayName = 'Text';
-
-export const Button = styled(BaseComponent('button'))`
+export const Button = styled.button`
 	${commonStyles};
 `;
 Button.defaultProps = { outline: '0px' };
 Button.displayName = 'Button';
-
-export const Image = styled(BaseComponent('img'))`
+export const Image = styled.img`
 	${commonStyles};
 `;
 Image.defaultProps = { alt: '' };
 Image.displayName = 'Image';
-
-export const StyledSvg = styled(BaseComponent('svg'))`
+export const StyledSvg = styled.svg`
 ${commonStyles};
 `;
 StyledSvg.defaultProps = { alt: '' };
 StyledSvg.displayName = 'Svg';
-
-export const Path = styled(BaseComponent('path'))`
+export const Path = styled.path`
 ${commonStyles};
 `;
 Path.displayName = 'Path';

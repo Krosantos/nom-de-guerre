@@ -1,18 +1,18 @@
 {
 	"presets": [
 		[
-			"env",
+			"@babel/preset-env",
 			{
 				"targets": {
-					"electron": "2.0.2"
+					"electron": "4.0.1"
 				}
 			}
 		],
-		"react"
+		"@babel/preset-react"
 	],
 	"plugins": [
-		"transform-object-rest-spread",
-		"transform-runtime",
+		"@babel/plugin-proposal-object-rest-spread",
+		"@babel/plugin-transform-runtime",
 		[
 			"module-resolver",
 			{
@@ -25,7 +25,8 @@
 					"@pairs": "./src/client/modules/pairs",
 					"@selectors": "./src/client/modules/selectors",
 					"@styled": "./src/client/styled"
-				}
+				},
+				"cwd": "packagejson"
 			}
 		]
 	]

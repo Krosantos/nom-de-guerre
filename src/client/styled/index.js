@@ -1,4 +1,3 @@
-import Svg from './Svg';
 import {
 	Box,
 	Text,
@@ -11,6 +10,4 @@ export {
 	Text,
 	Button,
 	Image,
-	Svg,
 };
-

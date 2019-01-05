@@ -1,7 +1,7 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Button } from '@styled';
-
-const StyledButton = Button.extend.attrs({
+const StyledButton = styled(Button).attrs({
 	bg: 'wine',
 	border: 'none',
 	color: 'pale',
@@ -18,7 +18,6 @@ const StyledButton = Button.extend.attrs({
 })`
     transition: background-color 350ms;
 `;
-
 const MainMenuButton = ({
 	children,
 	className,
@@ -31,5 +30,4 @@ const MainMenuButton = ({
 		{children}
 	</StyledButton>
 );
-
 export default Button.withComponent(MainMenuButton);
