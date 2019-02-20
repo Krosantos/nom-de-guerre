@@ -1,3 +1,3 @@
 const cleanFolders = require('./cleanFolders');
 
-cleanFolders();
+cleanFolders({ killDist: true });
