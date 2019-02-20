@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Button } from '@styled';
+import { Button } from '@core';
 import { themeGet } from 'styled-system';
 
 const StyledButton = styled(Button).attrs({
@@ -11,6 +11,7 @@ const StyledButton = styled(Button).attrs({
 	display: 'block',
 	fontFamily: 'Cinzel',
 	fontSize: '2rem',
+	mt: 4,
 	transition: 'background-color 350ms',
 })`
 	:hover {
@@ -22,15 +23,13 @@ const StyledButton = styled(Button).attrs({
 `;
 const MainMenuButton = ({
 	children,
-	className,
 	handleClick,
 }) => (
 	<StyledButton
-		className={className}
 		onClick={handleClick}
 	>
 		{children}
 	</StyledButton>
 );
 
-export default Button.withComponent(MainMenuButton);
+export default MainMenuButton;

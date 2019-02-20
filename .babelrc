@@ -24,7 +24,7 @@
 					"@components": "./src/client/components",
 					"@pairs": "./src/client/modules/pairs",
 					"@selectors": "./src/client/modules/selectors",
-					"@styled": "./src/client/styled"
+					"@core": "./src/client/components/core"
 				},
 				"cwd": "packagejson"
 			}

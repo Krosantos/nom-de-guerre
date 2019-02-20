@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import theme from './styled/theme';
+import theme from '@core/theme';
 import Page from './pages';
 import './index.css';
 

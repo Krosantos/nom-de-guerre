@@ -7,7 +7,7 @@
     "license": "UNLICENSED",
     "scripts": {
         "build": "npx webpack",
-        "clean": "node electron/cleanFolders",
+        "clean": "node electron/runClean",
         "compile-mac": "yarn build && node electron/prebuild && electron-packager ./staging \"Nom de Guerre\" --asar --icon=./icon --packageManager=yarn --appCategoryType=public.app-category.utilities --out=compiled/ --platform=darwin --no-tmpdir --overwrite",
         "compile-windows": "yarn build && node electron/prebuild && electron-packager ./staging \"Nom de Guerre\" --asar --icon=./icon --packageManager=yarn --out=compiled/ --platform=win32 --no-tmpdir --overwrite",
         "dev": "webpack-dev-server --mode development",
