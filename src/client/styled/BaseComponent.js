@@ -11,6 +11,7 @@ const BaseComponent = (component = 'div') => {
 		...props
 	}) => {
 		const cleanProps = pick(props, validHtmlAttributes);
+
 		cleanProps.className = className;
 		return React.createElement(
 			as,
@@ -18,9 +19,10 @@ const BaseComponent = (component = 'div') => {
 				ref: innerRef,
 				...cleanProps,
 			},
-			children
+			children,
 		);
 	};
+
 	return Cleaned;
 };
 

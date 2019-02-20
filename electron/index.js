@@ -4,20 +4,22 @@ const path = require('path');
 
 // Keep a global reference of the window object, to spare it from garbage collection.
 let mainWindow;
+
 function createWindow() {
 	mainWindow = new BrowserWindow({
-		width: 1000,
 		height: 550,
-		minWidth: 800,
 		minHeight: 500,
+		minWidth: 800,
 		webPreferences: {
 			webSecurity: false,
 		},
+		width: 1000,
 	});
 	// Check for content either from local (when developing), or from compoiled code.
 	if (process.env.FROM_LOCAL) {
 		mainWindow.loadURL('http://localhost:3000');
 		const installReduxTools = require('./installReduxTools'); /* eslint-disable-line global-require */
+
 		installReduxTools();
 	} else {
 		mainWindow.loadURL(url.format({
@@ -33,13 +35,11 @@ function createWindow() {
 app.on('ready', createWindow);
 app.on('window-all-closed', () => {
 // Mac behaves wacky. Emulate that.
-	if (process.platform !== 'darwin') {
+	if (process.platform !== 'darwin')
 		app.quit();
-	}
 });
 app.on('activate', () => {
 // Open a new window if there ain't one (mostly for Mac's benefit.)
-	if (mainWindow === null) {
+	if (mainWindow === null)
 		createWindow();
-	}
 });

@@ -5,20 +5,24 @@ const cleanFolders = () => {
 	const stagingPath = path.resolve(__dirname, '../staging');
 	const compilePath = path.resolve(__dirname, '../compiled');
 	const distPath = path.resolve(__dirname, '../dist');
-	const deleteFolderRecursive = (path) => {
-		if (fs.existsSync(path)) {
-			fs.readdirSync(path).forEach((file) => {
-				const curPath = `${path}/${file}`;
-				if (fs.lstatSync(curPath).isDirectory()) { // recurse
+	const deleteFolderRecursive = (filePath) => {
+		if (fs.existsSync(filePath)) {
+			fs.readdirSync(filePath).forEach((file) => {
+				const curPath = `${filePath}/${file}`;
+
+				// Recurse
+				if (fs.lstatSync(curPath).isDirectory()) {
 					deleteFolderRecursive(curPath);
-				} else { // delete file
+				} else {
+					// Delete file
 					fs.unlinkSync(curPath);
 				}
 			});
-			fs.rmdirSync(path);
+			fs.rmdirSync(filePath);
 		}
 	};
 	// Wipe out the folders.
+
 	deleteFolderRecursive(stagingPath);
 	deleteFolderRecursive(compilePath);
 	deleteFolderRecursive(distPath);

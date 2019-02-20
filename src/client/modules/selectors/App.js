@@ -1,1 +1,3 @@
-export const getActivePage = (state) => state.activePage;
+const getActivePage = (state) => state.activePage;
+
+export default getActivePage;

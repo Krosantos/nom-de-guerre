@@ -32,4 +32,5 @@ const MainMenuButton = ({
 		{children}
 	</StyledButton>
 );
+
 export default Button.withComponent(MainMenuButton);

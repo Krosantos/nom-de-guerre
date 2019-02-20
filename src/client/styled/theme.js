@@ -1,12 +1,14 @@
-export default {
+const theme = {
+	breakpoints: [375, 768, 1024, 1280, 1440],
 	colors: {
+		blood: '#700C1C',
 		pale: '#FDF7FA',
+		smoke: '#120A02',
 		steel: '#71696D',
 		wine: '#831B37',
-		blood: '#700C1C',
 		wood: '#4E281E',
-		smoke: '#120A02',
 	},
 	font: ['Cinzel', 'Barlow'],
-	breakpoints: [426, 769, 1025],
 };
+
+export default theme;

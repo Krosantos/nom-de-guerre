@@ -1,17 +1,19 @@
 const path = require('path');
 const webpack = require('webpack');
 const Dotenv = require('dotenv-webpack');
+
 module.exports = {
-	entry: './src/index.js',
-	node: {
-		fs: 'empty',
+	devServer: {
+		contentBase: path.join(__dirname, 'src', 'static'),
+		port: 3000,
 	},
+	entry: './src/index.js',
 	module: {
 		rules: [{
-			test: /\.(js|jsx)$/,
 			exclude: /(node_modules)/,
 			loader: 'babel-loader',
 			options: { presets: ['@babel/preset-env'] },
+			test: /\.(js|jsx)$/,
 		},
 		{
 			test: /\.css$/,
@@ -54,17 +56,17 @@ module.exports = {
 		},
 		],
 	},
-	resolve: { extensions: ['*', '.js', '.jsx'] },
-	output: {
-		publicPath: '/',
-		filename: 'bundle.js',
+
+	node: {
+		fs: 'empty',
 	},
-	devServer: {
-		contentBase: path.join(__dirname, 'src', 'static'),
-		port: 3000,
+	output: {
+		filename: 'bundle.js',
+		publicPath: '/',
 	},
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
 		new Dotenv(),
 	],
+	resolve: { extensions: ['*', '.js', '.jsx'] },
 };

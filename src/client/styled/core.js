@@ -12,6 +12,7 @@ import {
 } from 'styled-system';
 import BaseComponent from './BaseComponent';
 import cssProps from './cssProps';
+
 const commonStyles = css`
 	${borderRadius};
 	${borders};
@@ -24,6 +25,7 @@ const commonStyles = css`
 	${width};
 	${Object.keys(cssProps).map((key) => cssProps[key])};
 `;
+
 export const Box = styled(BaseComponent('div'))`
     ${commonStyles};
 `;

@@ -2,28 +2,37 @@ import React from 'react';
 import { Box, Text } from '@styled';
 import MainMenuButton from '@components/MainMenuButton';
 import constants from 'constants';
+
+const MAIN_TITLE = 'Nom de Guerre';
+const FIND_MATCH = 'Find Match';
+const EDIT = 'Edit Armies';
+const SETTINGS = 'Settings';
+
+const fontSize = ['4rem', '5rem'];
+
 const MainMenu = () => (
-	<Box height="100%" display="flex" flexDirection="column">
+	<Box display="flex" flexDirection="column" height="100%">
 		<Text
-			fontFamily="Cinzel"
 			color="smoke"
-			fontSize={['4rem', '5rem']}
 			display="block"
-			textAlign="center"
+			fontFamily="Cinzel"
+			fontSize={fontSize}
 			mx="auto"
 			my="5rem"
+			textAlign="center"
 		>
-			{'Nom de Guerre'}
+			{MAIN_TITLE}
 		</Text>
 		<MainMenuButton mt="2rem">
-			{'Find Match'}
+			{FIND_MATCH}
 		</MainMenuButton>
 		<MainMenuButton mt="2rem" pageType={constants.EDIT_ARMY_PAGE}>
-			{'Edit Armies'}
+			{EDIT}
 		</MainMenuButton>
 		<MainMenuButton mt="2rem">
-			{'Settings'}
+			{SETTINGS}
 		</MainMenuButton>
 	</Box>
 );
+
 export default MainMenu;

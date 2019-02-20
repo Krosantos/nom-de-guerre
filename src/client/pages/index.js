@@ -1,9 +1,10 @@
 import { connect } from 'react-redux';
 import { branch, compose, renderComponent } from 'recompose';
-import { getActivePage } from '@selectors/App';
+import getActivePage from '@selectors/App';
 import constants from 'constants';
 import MainMenu from './MainMenu';
 import EditArmies from './EditArmies';
+
 const mapStateToProps = (state) => ({
 	activePage: getActivePage(state),
 });
@@ -12,6 +13,7 @@ const shouldShowEditArmies = ({ activePage }) => activePage === constants.EDIT_A
 const enhance = compose(
 	connect(mapStateToProps),
 	branch(shouldShowMainMenu, renderComponent(MainMenu)),
-	branch(shouldShowEditArmies, renderComponent(EditArmies))
+	branch(shouldShowEditArmies, renderComponent(EditArmies)),
 );
+
 export default enhance(MainMenu);
