@@ -3,7 +3,7 @@ const theme = {
 	colors: {
 		blood: '#700C1C',
 		pale: '#FDF7FA',
-		smoke: '#120A02',
+		smoke: '#071108',
 		steel: '#71696D',
 		wine: '#831B37',
 		wood: '#4E281E',

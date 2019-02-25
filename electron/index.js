@@ -7,13 +7,13 @@ let mainWindow;
 
 function createWindow() {
 	mainWindow = new BrowserWindow({
-		height: 550,
-		minHeight: 500,
-		minWidth: 800,
+		height: 900,
+		minHeight: 900,
+		minWidth: 1280,
 		webPreferences: {
 			webSecurity: false,
 		},
-		width: 1000,
+		width: 1280,
 	});
 	// Check for content either from local (when developing), or from compoiled code.
 	if (process.env.FROM_LOCAL) {
