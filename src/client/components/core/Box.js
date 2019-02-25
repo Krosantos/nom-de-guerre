@@ -38,6 +38,7 @@ import {
 	left,
 	right,
 	bottom,
+	zIndex,
 } from 'styled-system';
 import {
 	borderWidth,
@@ -91,6 +92,7 @@ const Box = styled.div`
     ${right}
     ${fill}
     ${stroke}
+    ${zIndex}
 `;
 
 export default Box;
