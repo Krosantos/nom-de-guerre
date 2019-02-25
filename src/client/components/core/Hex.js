@@ -14,14 +14,14 @@ const asSvg = defaultProps({
 
 const getPathStyle = (fill, stroke) => ({
 	fill,
-	'fill-opacity': 1,
+	fillOpacity: 1,
 	stroke,
-	'stroke-dasharray': 'none',
-	'stroke-linecap': 'butt',
-	'stroke-linejoin': 'miter',
-	'stroke-miterlimit': 4,
-	'stroke-opacity': 1,
-	'stroke-width': 0.5291667,
+	strokeDasharray: 'none',
+	strokeLinecap: 'butt',
+	strokeLinejoin: 'miter',
+	strokeMiterlimit: 4,
+	strokeOpacity: 1,
+	strokeWidth: 0.5291667,
 });
 /* eslint-disable max-lines-per-function */
 const asHex = withProps(

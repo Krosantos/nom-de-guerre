@@ -3,7 +3,7 @@ import { Box, Hex } from '@core';
 import { times } from 'lodash';
 
 const calcHexPosition = (x, y, size) => {
-	const xPosition = x * size * 0.74;
+	const xPosition = x * size * 0.73;
 
 	let yPosition = y * size * 0.84;
 
@@ -31,9 +31,11 @@ const HexGrid = ({ x, y, size }) => (
 			const { xPosition, yPosition } = calcHexPosition(xIndex, yIndex, size);
 			const zIndex = calcHexZIndex(xIndex, x, yIndex, y);
 			const dimension = `${size}px`;
+			const key = `${xIndex}_${yIndex}`;
 
 			return (
 				<Hex
+					key={key}
 					height={dimension}
 					left={xPosition}
 					top={yPosition}
