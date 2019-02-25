@@ -42,6 +42,7 @@ import {
 import {
 	borderWidth,
 	fill,
+	overflowY,
 	stroke,
 	visibility,
 } from './customStyles';
@@ -63,6 +64,7 @@ const Box = styled.div`
     ${justifySelf}
     ${alignSelf}
     ${order}
+    ${overflowY}
     ${flexBasis}
     ${borderRadius}
     ${borderColor}
