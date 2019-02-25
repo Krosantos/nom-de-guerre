@@ -18,7 +18,6 @@ import {
 	flexBasis,
 	borderRadius,
 	borderColor,
-	borders,
 	fontFamily,
 	fontWeight,
 	lineHeight as lineHeightStyle,
@@ -41,6 +40,7 @@ import {
 	bottom,
 } from 'styled-system';
 import {
+	borderWidth,
 	fill,
 	stroke,
 	visibility,
@@ -49,6 +49,7 @@ import {
 const Box = styled.div`    
     ${color}
     ${space}
+    ${borderWidth}
     ${display}
     ${flex}
     ${width}
@@ -65,7 +66,6 @@ const Box = styled.div`
     ${flexBasis}
     ${borderRadius}
     ${borderColor}
-    ${borders}
     ${fontFamily}
     ${fontWeight}
     ${lineHeightStyle}

@@ -2,9 +2,9 @@ import { connect } from 'react-redux';
 import setActivePage from '@pairs/setActivePage';
 import MainMenuButton from './MainMenuButton';
 
-const mapDispatchToProps = (dispatch, props) => ({
+const mapDispatchToProps = (dispatch, { pageType }) => ({
 	handleClick: () => {
-		dispatch(setActivePage.creator(props.pageType));
+		dispatch(setActivePage.creator(pageType));
 	},
 });
 

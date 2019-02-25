@@ -7,7 +7,7 @@ const NoDefaultStyling = styled(Box)`
     outline: none;
 `;
 
-const asButton = defaultProps({ as: 'button' });
+const asButton = defaultProps({ as: 'button', borderWidth: '0px' });
 const Button = asButton(NoDefaultStyling);
 
 export default Button;

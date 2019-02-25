@@ -13,7 +13,7 @@
         "dev": "webpack-dev-server --mode development",
         "docker": "docker build -t ndg . && docker run -p 4000:4000 ndg",
         "lint": "eslint .",
-        "serve": "nodemon src/server/index.js --exec \"node -r dotenv/config -r @babel/register\"",
+        "serve": "nodemon server/index.js --exec \"node -r dotenv/config -r @babel/register\"",
         "start": "concurrently --kill-others \"yarn dev\" \"yarn window\"",
         "window": "cross-env FROM_LOCAL=true electron ."
     },
