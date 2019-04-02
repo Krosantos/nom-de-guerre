@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box, Hex } from '@core';
 import { times } from 'lodash';
+import Hex from './Hex';
 
 const calcBoxSize = (x, y, size) => {
 	const rawHeight = y * size * 0.9125;
@@ -38,7 +38,7 @@ const HexGrid = ({ x, y, size }) => {
 	const { height, width } = calcBoxSize(x, y, size);
 
 	return (
-		<Box height={height} position="relative" width={width}>
+		<div height={height} position="relative" width={width}>
 			{times(x, (xIndex) => times(y, (yIndex) => {
 				const { xPosition, yPosition } = calcHexPosition(xIndex, yIndex, size);
 				const zIndex = calcHexZIndex(xIndex, x, yIndex, y);
@@ -58,7 +58,7 @@ const HexGrid = ({ x, y, size }) => {
 					/>
 				);
 			}))}
-		</Box>
+		</div>
 	);
 };
 

@@ -1,22 +1,15 @@
 import React from 'react';
-import { Box } from '@core';
 import HexGrid from '@components/HexGrid';
+import styles from './styles.scss';
 
 const Army = () => (
-	<Box
-		alignItems="center"
-		bg="wine"
-		display="flex"
-		flex="0 0 auto"
-		flexDirection="column"
-		height="100%"
+	<div
+		className={styles.army}
 		id="I AM THE COHORT AND AUXILIARY"
-		justifyContent="center"
-		width="375px"
 	>
 
 		<HexGrid size={100} x={4} y={8} />
-	</Box>
+	</div>
 );
 
 export default Army;

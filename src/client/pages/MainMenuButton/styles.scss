@@ -1,0 +1,20 @@
+@import '@theme/color.scss';
+
+.mainMenuButton {
+    background-color: $wine;
+    color: $pale;
+    cursor: pointer;
+    display: block;
+    font-family: Cinzel;
+    font-size: 2rem;
+    margin-top: 2rem;
+    transition: background-color 350ms;
+
+    &:hover {
+        background-color: $blood;
+    }
+
+    &:active {
+        background-color: $wood;
+    }
+}

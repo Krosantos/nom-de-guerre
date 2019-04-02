@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box } from '@core';
+import styles from './styles.scss';
 
-const TopBar = () => (<Box bg="steel" flex="0 0 auto" height="60px" />);
+const TopBar = () => (<div className={styles.topBar} />);
 
 export default TopBar;

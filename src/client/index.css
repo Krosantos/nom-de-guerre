@@ -32,3 +32,9 @@ html, body, #root {
     font-family: 'Barlow-Thin';
     src: url("../static/fonts/BarlowCondensed-Thin.ttf") format('truetype');
 }
+
+button {
+    border-width: 0px;
+    border-style: solid;
+    outline: none;
+}

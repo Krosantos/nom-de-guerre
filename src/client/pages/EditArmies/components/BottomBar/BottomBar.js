@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box } from '@core';
+import styles from './styles.scss';
 
-const BottomBar = () => (<Box bg="steel" flex="0 0 auto" height="60px" />);
+const BottomBar = () => (<div className={styles.bottomBar} />);
 
 export default BottomBar;

@@ -1,0 +1,19 @@
+@import '@theme/color.scss';
+
+.mainMenu {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.title {
+    color: $smoke;
+    display: block;
+    font-family: Cinzel;
+    font-size: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}

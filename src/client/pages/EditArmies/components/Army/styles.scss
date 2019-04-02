@@ -1,0 +1,11 @@
+@import '@theme/color.scss';
+
+.army {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 375px;
+    background-color: $wine;
+}

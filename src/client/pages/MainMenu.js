@@ -1,27 +1,18 @@
 import React from 'react';
-import { Box, Text } from '@core';
-import MainMenuButton from '@components/MainMenuButton';
+import MainMenuButton from './MainMenuButton';
 import { EDIT_ARMY_PAGE } from '@constants';
+import styles from './styles.scss';
 
 const MAIN_TITLE = 'Nom de Guerre';
 const FIND_MATCH = 'Find Match';
 const EDIT = 'Edit Armies';
 const SETTINGS = 'Settings';
-const titleFontSize = [9, 10];
 
 const MainMenu = () => (
-	<Box display="flex" flexDirection="column" height="100%">
-		<Text
-			color="smoke"
-			display="block"
-			fontFamily="Cinzel"
-			fontSize={titleFontSize}
-			mx="auto"
-			my="5rem"
-			textAlign="center"
-		>
+	<div className={styles.mainMenu}>
+		<span className={styles.title}>
 			{MAIN_TITLE}
-		</Text>
+		</span>
 		<MainMenuButton>
 			{FIND_MATCH}
 		</MainMenuButton>
@@ -31,7 +22,7 @@ const MainMenu = () => (
 		<MainMenuButton>
 			{SETTINGS}
 		</MainMenuButton>
-	</Box>
+	</div>
 );
 
 export default MainMenu;

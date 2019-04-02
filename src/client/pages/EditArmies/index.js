@@ -1,25 +1,22 @@
 import React from 'react';
-import { Box } from '@core';
 import Army from './components/Army';
 import UnitGrid from './components/UnitGrid';
 import TopBar from './components/TopBar';
 import BottomBar from './components/BottomBar';
+import styles from './styles.scss';
 
 const EditArmies = () => (
-	<Box display="flex" height="100%" width="100%">
+	<div className={styles.outer}>
 		<Army />
-		<Box
-			display="flex"
-			flexDirection="column"
+		<div
+			className={styles.inner}
 			id="REST OF THE PAGE"
-			justifyContent="space-between"
-			width="100%"
 		>
 			<TopBar />
 			<UnitGrid />
 			<BottomBar />
-		</Box>
-	</Box>
+		</div>
+	</div>
 );
 
 export default EditArmies;

@@ -7,7 +7,7 @@ const actionMap = assign(
 );
 
 const initialState = {
-	activePage: 'editArmy',
+	activePage: 'mainMenu',
 };
 const rootReducer = (state, action) => {
 	if (!actionMap[action.type])

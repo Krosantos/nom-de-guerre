@@ -7,11 +7,7 @@ const UnitCard = ({
 	cost,
 }) => (
 	<div
-		bg="wine"
 		className={styles.unitCard}
-		height="200px"
-		m={2}
-		width="150px"
 	>
 		{name}
 		{color}

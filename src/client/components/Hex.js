@@ -1,6 +1,5 @@
 import React from 'react';
 import { compose, defaultProps, withProps } from 'recompose';
-import Box from './Box';
 
 const VIEW_BOX = '0 0 54.744808 55.56216';
 
@@ -58,6 +57,6 @@ const asHex = withProps(
 
 const enhance = compose(asSvg, asHex);
 
-const Hex = enhance(Box);
+const Hex = enhance(() => (<div />));
 
 export default Hex;

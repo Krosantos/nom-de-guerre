@@ -6,6 +6,7 @@ const Dotenv = require('dotenv-webpack');
 const CssModuleLoader = {
 	loader: 'css-loader',
 	query: {
+		localIdentName: '[local]__[hash:base64:5]',
 		modules: true,
 	},
 };
@@ -89,9 +90,9 @@ module.exports = {
 			'@api': path.resolve(__dirname, 'src', 'client', 'modules', 'api'),
 			'@components': path.resolve(__dirname, 'src', 'client', 'components'),
 			'@constants': path.resolve(__dirname, 'src', 'constants'),
-			'@core': path.resolve(__dirname, 'src', 'client', 'components', 'core'),
 			'@pairs': path.resolve(__dirname, 'src', 'client', 'modules', 'pairs'),
 			'@selectors': path.resolve(__dirname, 'src', 'client', 'modules', 'selectors'),
+			'@theme': path.resolve(__dirname, 'src', 'client', 'theme'),
 		},
 		extensions: ['*', '.js', '.jsx'],
 	},
