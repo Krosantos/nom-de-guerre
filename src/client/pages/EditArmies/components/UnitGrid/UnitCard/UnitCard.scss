@@ -1,8 +1,8 @@
-$purple: #8200FF;
+@import '@theme/color.scss';
 
 .unitCard {
     height: 200px;
     width: 150px;
     margin: 16px;
-    background-color: $purple;
+    background-color: $wine;
 }

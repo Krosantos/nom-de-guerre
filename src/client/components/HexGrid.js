@@ -1,6 +1,7 @@
 import React from 'react';
 import { times } from 'lodash';
 import Hex from './Hex';
+import styles from './styles.scss';
 
 const calcBoxSize = (x, y, size) => {
 	const rawHeight = y * size * 0.9125;
@@ -38,7 +39,7 @@ const HexGrid = ({ x, y, size }) => {
 	const outerDimensions = calcBoxSize(x, y, size);
 
 	return (
-		<div position="relative" style={outerDimensions}>
+		<div className={styles.hexGrid} style={outerDimensions}>
 			{times(x, (xIndex) => times(y, (yIndex) => {
 				const { xPosition, yPosition } = calcHexPosition(xIndex, yIndex, size);
 				const zIndex = calcHexZIndex(xIndex, x, yIndex, y);
