@@ -1,6 +1,14 @@
 const path = require('path');
 const webpack = require('webpack');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const Dotenv = require('dotenv-webpack');
+
+const CssModuleLoader = {
+	loader: 'css-loader',
+	query: {
+		modules: true,
+	},
+};
 
 module.exports = {
 	devServer: {
@@ -16,16 +24,15 @@ module.exports = {
 			test: /\.(js|jsx)$/,
 		},
 		{
-			loader: 'style-loader',
-			test: /\.css$/,
-		},
-		{
-			loader: 'css-loader',
-			query: {
-				localIdentName: '[name]__[local]___[hash:base64:5]',
-				modules: true,
-			},
-			test: /\.css$/,
+			rules: [{
+				test: /\.(scss|css)$/,
+				use: [
+					// fallback to style-loader in development
+					process.env.NODE_ENV === 'production' ? MiniCssExtractPlugin.loader : 'style-loader',
+					CssModuleLoader,
+					'sass-loader',
+				],
+			}],
 		},
 		{
 			test: /\.env$/,
@@ -75,6 +82,7 @@ module.exports = {
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
 		new Dotenv(),
+		new MiniCssExtractPlugin(),
 	],
 	resolve: {
 		alias: {

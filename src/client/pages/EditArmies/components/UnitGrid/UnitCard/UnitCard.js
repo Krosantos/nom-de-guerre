@@ -1,13 +1,14 @@
 import React from 'react';
-import { Box } from '@core';
+import styles from './UnitCard.scss';
 
 const UnitCard = ({
 	name,
 	color,
 	cost,
 }) => (
-	<Box
+	<div
 		bg="wine"
+		className={styles.unitCard}
 		height="200px"
 		m={2}
 		width="150px"
@@ -15,7 +16,7 @@ const UnitCard = ({
 		{name}
 		{color}
 		{cost}
-	</Box>
+	</div>
 );
 
 export default UnitCard;
