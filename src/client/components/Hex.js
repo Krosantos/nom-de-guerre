@@ -4,8 +4,6 @@ import { compose, defaultProps, withProps } from 'recompose';
 const VIEW_BOX = '0 0 54.744808 55.56216';
 
 const asSvg = defaultProps({
-	as: 'svg',
-	position: 'absolute',
 	sideFill: '#907359',
 	stroke: '#000000',
 	topFill: '#5ac32d',
@@ -57,6 +55,6 @@ const asHex = withProps(
 
 const enhance = compose(asSvg, asHex);
 
-const Hex = enhance(() => (<div />));
+const Hex = enhance(({ style, children }) => (<svg style={style} viewBox={VIEW_BOX}>{children}</svg>));
 
 export default Hex;

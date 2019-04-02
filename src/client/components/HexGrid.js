@@ -35,26 +35,32 @@ const calcHexZIndex = (x, maxX, y) => {
 };
 
 const HexGrid = ({ x, y, size }) => {
-	const { height, width } = calcBoxSize(x, y, size);
+	const outerDimensions = calcBoxSize(x, y, size);
 
 	return (
-		<div height={height} position="relative" width={width}>
+		<div position="relative" style={outerDimensions}>
 			{times(x, (xIndex) => times(y, (yIndex) => {
 				const { xPosition, yPosition } = calcHexPosition(xIndex, yIndex, size);
 				const zIndex = calcHexZIndex(xIndex, x, yIndex, y);
 				const dimension = `${size}px`;
 				const key = `${xIndex}_${yIndex}`;
 
+				// eslint-disable-next-line react-perf/jsx-no-new-object-as-prop
+				const style = {
+					height: dimension,
+					left: xPosition,
+					position: 'absolute',
+					top: yPosition,
+					width: dimension,
+					zIndex,
+				};
+
 				return (
 					<Hex
 						key={key}
-						height={dimension}
-						left={xPosition}
-						top={yPosition}
-						width={dimension}
+						style={style}
 						x={xIndex}
 						y={yIndex}
-						zIndex={zIndex}
 					/>
 				);
 			}))}
