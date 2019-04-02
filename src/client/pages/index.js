@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import { branch, compose, renderComponent } from 'recompose';
 import getActivePage from '@selectors/App';
-import { MAIN_MENU_PAGE, EDIT_ARMY_PAGE } from 'constants';
+import { MAIN_MENU_PAGE, EDIT_ARMY_PAGE } from '@constants';
 import MainMenu from './MainMenu';
 import EditArmies from './EditArmies';
 

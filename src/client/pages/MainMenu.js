@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Text } from '@core';
 import MainMenuButton from '@components/MainMenuButton';
-import { EDIT_ARMY_PAGE } from 'constants';
+import { EDIT_ARMY_PAGE } from '@constants';
 
 const MAIN_TITLE = 'Nom de Guerre';
 const FIND_MATCH = 'Find Match';

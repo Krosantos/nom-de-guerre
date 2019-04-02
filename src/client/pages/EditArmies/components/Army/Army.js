@@ -8,6 +8,7 @@ const Army = () => (
 		bg="wine"
 		display="flex"
 		flex="0 0 auto"
+		flexDirection="column"
 		height="100%"
 		id="I AM THE COHORT AND AUXILIARY"
 		justifyContent="center"
