@@ -29,7 +29,7 @@ module.exports = {
 				test: /\.(scss|css)$/,
 				use: [
 					// fallback to style-loader in development
-					process.env.NODE_ENV === 'production' ? MiniCssExtractPlugin.loader : 'style-loader',
+					'style-loader',
 					CssModuleLoader,
 					'sass-loader',
 				],
